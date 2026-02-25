@@ -1,0 +1,227 @@
+<!--
+author:   Dr. Hannes Tegelbeckers
+email:    hannes.tegelbeckers@ovgu.de
+version:  1.0.0
+language: en
+narrator: US English Male
+
+comment:  Data Science Student Project Assignments – Overview of four applied AI/data science projects in collaboration with real-world partners.
+-->
+
+# Real life application - Student Projects
+
+<!-- style="text-align: center; padding: 1em;" -->
+**Dr. Hannes Tegelbeckers**
+
+<!-- style="text-align: center;" -->
+Research Assistant
+
+<!-- style="text-align: center;" -->
+Professorship of Engineering Pedagogics and Technical Education
+UNESCO-UNEVOC Centre Magdeburg
+
+<!-- style="text-align: center;" -->
+Otto von Guericke University Magdeburg
+
+---
+
+<!-- style="text-align: center;" -->
+| Contact | Details |
+|---------|---------|
+| ✉️ E-Mail | [hannes.tegelbeckers@ovgu.de](mailto:hannes.tegelbeckers@ovgu.de) |
+| 📞 Phone | +49 391 675 6373 |
+
+---
+
+**Research & Activities**
+
+- Development of Open Educational Resources (OER) using LiaScript and AI tools
+- Digitalization strategies for teacher education (Center for Teacher Education, OvGU)
+- AI competency frameworks for TVET educators (UNESCO framework)
+- AI and ICT Training for international development projects
+- Workshops on AI ethics, human agency, and prompting techniques for educators
+
+---
+
+## Project 1 – Landesfrauenklinik: AI Research Assistant
+
+**Partner:** Landesfrauenklinik (State Women's Clinic)
+
+**Domain:** Obstetrics & Gynecology – Medical Research Support
+
+---
+
+**Background**
+
+Researchers at the clinic must survey large volumes of medical literature and patient data to inform clinical care. Manual literature review is time-consuming and prone to gaps. AI tools like **Elicit** already demonstrate how an AI can identify top papers in a field and organize them for systematic review.
+
+---
+
+**Goal**
+
+Build an **AI-powered research assistant** that enables clinicians to query medical literature and anonymized research datasets using natural language, and receive concise, reliable summaries of key findings.
+
+---
+
+**Key Tasks**
+
+- Gather and preprocess domain data (anonymized patient statistics, past study records, Excel/database exports)
+- Integrate an AI model (retrieval-augmented generation or fine-tuned LLM) to query PubMed and internal datasets
+- Build an abstract summarization component for retrieved articles
+- Test on representative queries (e.g., _"What are risk factors for preeclampsia?"_) and evaluate summary accuracy
+
+---
+
+**Deliverables**
+
+| # | Deliverable |
+|---|-------------|
+| 1 | Documented Python codebase for data ingestion and preprocessing |
+| 2 | AI pipeline (Hugging Face / spaCy / RAG) with query interface (console or web) |
+| 3 | Final report with example results and discussion of limitations (data privacy, accuracy) |
+
+---
+
+**Tools & Libraries:** Python · Pandas · Hugging Face Transformers · spaCy · PubMed API
+
+---
+
+## Project 2 – Johanniter Daycare: AI Planning Assistant
+
+**Partner:** Johanniter-run Daycare Center (~280 children, infants to preschool age)
+
+**Domain:** Childcare Administration – Staffing & Enrollment Forecasting
+
+---
+
+**Background**
+
+Staff scheduling and class grouping are currently managed through two static Excel files (child enrollment data and staff rosters). Fixed spreadsheets make it difficult to anticipate bottlenecks like unexpected spikes in a toddler group. Tools like **Playground's Predictive Enrollment** already offer dynamic forecasting of open spots by age group so directors can plan confidently.
+
+---
+
+**Goal**
+
+Create a **self-hosted AI planning system** that predicts staffing and enrollment needs across the year, highlights capacity risks before they occur, and suggests corrective actions.
+
+---
+
+**Key Tasks**
+
+- Import and consolidate the two Excel datasets using Pandas (child ages, start dates, staff schedules)
+- Model enrollment turnover and age-group transitions over time
+- Apply statistical / ML methods to forecast future enrollment per age group
+- Incorporate legal childcare ratios (children per caregiver) as hard constraints
+- Build a scheduling optimizer (e.g. OR-Tools or constraint solving) that assigns staff to groups weekly
+- Generate automated alerts for forecasted capacity violations
+
+---
+
+**Deliverables**
+
+| # | Deliverable |
+|---|-------------|
+| 1 | Python tool that reads both Excel files and produces forecast plots (staff vs. children headcount) |
+| 2 | Schedule plan output with flagged risk alerts (e.g. _"Toddler Group A will exceed ratio on May 1"_) |
+| 3 | Documentation explaining the forecasting model, constraints, and how to run the scheduler |
+
+---
+
+**Tools & Libraries:** Python · Pandas · scikit-learn · OR-Tools · Matplotlib / Seaborn
+
+---
+
+## Project 3 – NEXR Erasmus: XR Learning Material Generator AI
+
+**Partner:** NEXR Erasmus Project
+
+**Domain:** Vocational Training – Immersive XR (Extended Reality) E-Learning
+
+---
+
+**Background**
+
+The NEXR Erasmus project develops immersive e-learning materials for vocational training. Creating XR content is resource-intensive. AI tools like **PorticoXR** use advanced AI to streamline VR content creation and deliver high-quality content faster. **ThingLink's XR Scenario Builder** uses AI templates and branching logic to let creators recreate real-world job situations quickly.
+
+---
+
+**Goal**
+
+Design an **AI agent** that takes a course topic as input and automatically generates a complete XR lesson plan or storyboard – structured according to the **BMAD workflow** (a structured, AI-driven development method) – for offline-capable delivery.
+
+---
+
+**Key Tasks**
+
+- Research XR authoring formats (Unity, WebXR, H5P, LiaScript)
+- Define an XR lesson structure: learning objectives, scenes, interactions, narration, quizzes
+- Plan the BMAD-guided AI agent workflow (inputs → iterative prompts → structured outputs)
+- Implement an offline-capable pipeline using an open-source LLM or specialized generator
+- Output draft XR scripts as structured JSON scene configs or LiaScript code
+- Validate outputs for completeness: 3D object descriptions, narration steps, quiz questions, branching logic
+
+---
+
+**Deliverables**
+
+| # | Deliverable |
+|---|-------------|
+| 1 | Prototype Python codebase of the XR material generator agent |
+| 2 | Example output: input topic → XR lesson plan (JSON / LiaScript) with scenes and interactions |
+| 3 | Documentation of the BMAD-guided development process and instructions for running the agent |
+| 4 | Optional: simple XR preview using H5P or a basic WebXR viewer |
+
+---
+
+**Tools & Libraries:** Python · Open-source LLM · H5P / LiaScript / WebXR · BMAD methodology
+
+---
+
+## Project 4 – Guatemala Finca: Farm HR & Resource AI
+
+**Partner:** Guatemalan Coffee Finca (using **Aragro** farm management platform)
+
+**Domain:** Agricultural Management – Labor Planning & Resource Optimization
+
+---
+
+**Background**
+
+The finca uses the **Aragro** platform to manage farm data including inventory, costs, payroll, and production. Aragro can assist farmers in making informed decisions about resource allocation, leading to cost savings and increased efficiency. Currently, analysis is largely manual. Labor conditions required for certifications are tracked in Aragro, but reporting and forecasting are not automated.
+
+---
+
+**Goal**
+
+Build an **AI assistant** that automates analysis of Aragro data exports, forecasts seasonal labor needs, flags inefficient resource use, and generates continuously updated reports – following the **BMAD workflow** for project structure.
+
+---
+
+**Key Tasks**
+
+- Obtain and parse sample Aragro data exports (CSV: labor hours, costs, inputs, yields)
+- Write automated data-fetching scripts (requests / Selenium) and cleaning pipelines
+- Integrate data into a unified format (Pandas / local database)
+- Analyze key metrics: labor hours per crop, cost per hectare, yield forecasts
+- Apply AI/statistical models: correlate weather to yield, flag underutilized equipment, predict harvest labor needs
+- Ensure HR planning compliance: validate that labor shifts meet certification requirements tracked in Aragro
+- Create dashboards and visualization scripts showing trends and optimization suggestions
+
+---
+
+**Deliverables**
+
+| # | Deliverable |
+|---|-------------|
+| 1 | Automated data-fetching and cleaning scripts for Aragro exports |
+| 2 | Jupyter notebooks with analysis and charts (e.g. _Monthly Labor Cost vs. Output_) |
+| 3 | Automated report generator for scheduling and resource optimization |
+| 4 | Documentation explaining all components, BMAD structure, and how to run each tool |
+
+---
+
+**Tools & Libraries:** Python · Pandas · scikit-learn / statsmodels · Matplotlib · Selenium · requests · BMAD methodology
+
+---
+
+> **Note for all projects:** Use Python with standard libraries (pandas, scikit-learn, PyTorch where needed) in VS Code. Projects 3 and 4 follow the BMAD AI-development methodology. All projects require thoughtful data handling, clear documentation, and justified design choices.
